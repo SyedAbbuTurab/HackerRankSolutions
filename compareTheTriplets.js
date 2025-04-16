@@ -4,18 +4,27 @@ function compareTriplets(a, b) {
     let bobPoints = 0;
 
     for (let i = 0; i < a.length; i++) {
-        if(a[i] > b[i]){
+        if (a[i] > b[i]) {
             alicePoints++;
         } else if (a[i] < b[i]) {
             bobPoints++;
         }
     }
     return [alicePoints, bobPoints]
-    
+
 }
 let a = [1, 2, 3]
 let b = [3, 2, 1]
 
-let res = compareTriplets(a,b)
+let res = compareTriplets(a, b)
 console.log(res);
+
+function aVeryBigSum(ar) {
+    // Write your code here
+    let sum = 0;
+    for (let i = 0; i < ar.length; i++) {
+        sum += ar[i]
+    }
+    return sum;
+}
 
