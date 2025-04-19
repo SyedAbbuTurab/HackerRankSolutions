@@ -23,7 +23,7 @@ function birthdayCakeCandlesNoSort(candles) {
     for (let i = 0; i < candles.length; i++) {
         if(candles[i] >  maxHeight) {
             maxHeight = candles[i]
-            count++;
+            count = 1;
         } else if(candles[i] ==  maxHeight) {
             count++
         }
@@ -34,4 +34,4 @@ function birthdayCakeCandlesNoSort(candles) {
 }
 
 birthdayCakeCandles([3, 2, 1, 3])
-birthdayCakeCandlesNoSort([3, 2, 1, 3])
+birthdayCakeCandlesNoSort([18, 90, 90, 13, 90, 75, 90, 8, 90, 43])
