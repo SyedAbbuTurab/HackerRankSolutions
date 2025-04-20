@@ -8,11 +8,11 @@ process.stdin.setEncoding('utf-8');
 let inputString = '';
 let currentLine = 0;
 
-process.stdin.on('data', function(inputStdin) {
+process.stdin.on('data', function (inputStdin) {
     inputString += inputStdin;
 });
 
-process.stdin.on('end', function() {
+process.stdin.on('end', function () {
     inputString = inputString.split('\n');
 
     main();
@@ -33,14 +33,14 @@ function readLine() {
 
 function xorAndSum(a, b) {
     // Write your code here
-var len = b.length + 314159;
+    var len = b.length + 314159;
     var leadingA = len - a.length;
     var leadingB = len - b.length;
     var res = 0;
     var base = 1;
     var onesInRange = 0;
     var mod = 1000000007;
-    for (var i = len-1; i >= 0; i--) {
+    for (var i = len - 1; i >= 0; i--) {
         var digitA;
         if (i >= leadingA) {
             var indexA = i - leadingA;
@@ -55,31 +55,31 @@ var len = b.length + 314159;
         } else {
             digitB = 0;
         }
-        
-        var digitB2 ;
-        
-        if (i+314160 < len) {
-            digitB2 = b.charAt(i+314160-leadingB);
+
+        var digitB2;
+
+        if (i + 314160 < len) {
+            digitB2 = b.charAt(i + 314160 - leadingB);
         } else {
             digitB2 = 0;
         }
-        
+
         if (digitB == 1) {
             onesInRange++;
             onesInRange = onesInRange % mod;
         }
         if (digitB2 == 1) {
             onesInRange--;
-            onesInRange = (onesInRange+mod) % mod;
+            onesInRange = (onesInRange + mod) % mod;
         }
-        
+
         if (digitA == 0) {
-            res = (res + (onesInRange*base)%mod)%mod; 
+            res = (res + (onesInRange * base) % mod) % mod;
         } else {
-            res = (res + ((314160-onesInRange)*base)%mod)%mod;
+            res = (res + ((314160 - onesInRange) * base) % mod) % mod;
         }
-        
-        base = (2*base)% mod;
+
+        base = (2 * base) % mod;
     }
     return res;
 
