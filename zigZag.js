@@ -18,4 +18,5 @@ function convert(s, numRows) {
     return rows.join('');
 }
 
-
+let s = "PAYPALISHIRING", numRows = 4
+console.log(convert(s, numRows));
