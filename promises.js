@@ -1,7 +1,7 @@
 function getSum(a, b) {
     const customPromise = new Promise((resolve, reject) => {
         const sum = a + b
-        if (sum > 5) {
+        if (sum < 5) {
             resolve("Sum Resolved")
         } else {
             reject("Sorry Sum rejected!")
@@ -43,5 +43,15 @@ function getMul(a, b) {
 
 let res = Promise.all([getSum(1, 2), getSub(1, 2), getMul(1, 2)])
 res.then(data => console.log("Success:", data))
-   .catch(err => console.log("Failed because:", err));
+    .catch(err => console.log("Failed because:", err));
 
+let resAllSettle = Promise.allSettled([getSum(1, 2), getSub(1, 2), getMul(1, 2)])
+    .then(result => {
+        result.forEach((res) => {
+            if (res.status === 'fulfilled') {
+                console.log("Success:", res.value);
+            } else if (res.status === "rejected") {
+                console.log("Failure:", res.reason);
+            }
+        })
+    })
