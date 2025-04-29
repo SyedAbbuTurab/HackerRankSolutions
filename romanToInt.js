@@ -24,3 +24,6 @@ var romanToInt = function (s) {
     }
     return total;
 };
+
+
+console.log(romanToInt("MCMXCIV"));
