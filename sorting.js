@@ -65,6 +65,9 @@ var selectionSort = function (arr) {
             let temp = arr[i]
             arr[i] = arr[minIndex];
             arr[minIndex] = temp;
+
+            // Other way ppossible for Swap(Noticeable only in large datasets or hot loops)
+            [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]]
         }
     }
     return arr;
