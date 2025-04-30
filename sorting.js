@@ -31,5 +31,21 @@ var bubbleSort = function (arr, bool) {
     return arr;
 }
 
-console.log(bubbleSort([5, 2, 9, 1], false));
+const { performance } = require('perf_hooks'); // For Node.js
+
+
+let bigArr = [];
+for (let i = 0; i < 1000; i++) {
+    bigArr.push(i); // Already sorted
+}
+let start1 = performance.now();
+bubbleSort([...bigArr], true); // Regular version
+let end1 = performance.now();
+
+let start2 = performance.now();
+bubbleSort([...bigArr], false); // Optimized version
+let end2 = performance.now();
+
+console.log("Regular Bubble Sort time:", (end1 - start1).toFixed(4), "ms");
+console.log("Optimized Bubble Sort time:", (end2 - start2).toFixed(4), "ms");
 
