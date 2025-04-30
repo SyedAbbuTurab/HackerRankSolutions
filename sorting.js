@@ -46,6 +46,29 @@ let start2 = performance.now();
 bubbleSort([...bigArr], false); // Optimized version
 let end2 = performance.now();
 
-console.log("Regular Bubble Sort time:", (end1 - start1).toFixed(4), "ms");
-console.log("Optimized Bubble Sort time:", (end2 - start2).toFixed(4), "ms");
+// console.log("Regular Bubble Sort time:", (end1 - start1).toFixed(4), "ms");
+// console.log("Optimized Bubble Sort time:", (end2 - start2).toFixed(4), "ms");
+
+
+// Selection Sort Begins Here
+
+var selectionSort = function (arr) {
+    let arrLength = arr.length;
+    for (let i = 0; i < arrLength; i++) {
+        let minIndex = i;
+        for(let j = i + 1; j < arrLength; j++) {
+            if(arr[j] < arr[minIndex]) {
+                minIndex = j
+            }
+        }
+        if( minIndex !== i) {
+            let temp = arr[i]
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+    }
+    return arr;
+}
+
+console.log(selectionSort([5, 2, 9, 1]));
 
