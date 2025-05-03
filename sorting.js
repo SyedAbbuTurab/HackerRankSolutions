@@ -6,15 +6,17 @@ var bubbleSort = function (arr, bool) {
     let temp;
     // Two ways to do it see if block
     if (bool) {
-        for (let i = 0; i < arrLength; i++) {
-            for (let j = 0; j < arrLength - 1 - i; j++) {
-                if (arr[j] > arr[j + 1]) {
+        for (let i = 0; i < arrLength - 1; i++) {
+            for(let j = 0; j < arrLength; j++) {
+                if(arr[j] > arr[j + 1]) {
                     temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
                 }
             }
         }
+        console.log(arr);
+        
     } else {
         for (let i = 0; i < arrLength; i++) {
             let swapped = false;
@@ -39,7 +41,8 @@ for (let i = 0; i < 1000; i++) {
     bigArr.push(i); // Already sorted
 }
 let start1 = performance.now();
-bubbleSort([...bigArr], true); // Regular version
+// bubbleSort([...bigArr], true); // Regular version
+bubbleSort([10, 15, 0, -1, 10, 88, 2, 3, 98, 88, 74, -15], true); // Regular version
 let end1 = performance.now();
 
 let start2 = performance.now();
