@@ -56,22 +56,39 @@ var selectionSort = function (arr) {
     let arrLength = arr.length;
     for (let i = 0; i < arrLength; i++) {
         let minIndex = i;
-        for(let j = i + 1; j < arrLength; j++) {
-            if(arr[j] < arr[minIndex]) {
+        for (let j = i + 1; j < arrLength; j++) {
+            if (arr[j] < arr[minIndex]) {
                 minIndex = j
             }
         }
-        if( minIndex !== i) {
+        if (minIndex !== i) {
             let temp = arr[i]
             arr[i] = arr[minIndex];
             arr[minIndex] = temp;
 
             // Other way ppossible for Swap(Noticeable only in large datasets or hot loops)
-            [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]]
+            // [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]]
         }
     }
     return arr;
 }
 
-console.log(selectionSort([5, 2, 9, 1]));
+// console.log(selectionSort([5, 2, 9, 1]));
 
+var insertionSort = (arr) => {
+    const arrLength = arr.length;
+
+    for (let i = 1; i < arrLength; i++) {
+        let current = arr[i]
+        let j = i - 1;
+        while (j >= 0 && arr[j] > current) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+
+        arr[j + 1] = current
+    }
+    console.log(arr);
+}
+
+insertionSort([5, 3, 8, 1, 2])
