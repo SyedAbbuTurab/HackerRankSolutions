@@ -15,8 +15,18 @@ var removeDuplicates = (arr) => {
 
 var removeDuplicatesUnSort = (arr) => {
 
-    const setArr = [...new Set(arr)];
-    console.log(setArr);
+    // const setArr = [...new Set(arr)];
+    // console.log(setArr);
+    const seen = new Set();
+    const uniqueArr = [];
+
+    for(let i = 0; i < arr.length; i++) {
+        if(!seen.has(arr[i])) {
+            seen.add(arr[i]);
+            uniqueArr.push(arr[i])
+        }
+    }
+    console.log(uniqueArr);
     
 }
 
