@@ -43,9 +43,31 @@ var duplicatesTwoPointer = (arr) => {
             arr[i] = arr[j]
         }
     }
-    console.log(arr.slice(0, i + 1));
+    // console.log(arr.slice(0, i + 1));
 
 }
 
 let arr = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
 duplicatesTwoPointer(arr);
+
+
+const moveZeroes = (arr) => {
+    let i = 0;
+
+    for(let j = 0; j < arr.length; j++) {
+        if(arr[j] !== 0) {
+            arr[i] = arr[j]
+            i++;
+        }
+    }
+    while(i < arr.length) {
+        arr[i] = 0;
+        i++;
+    }
+
+    console.log(arr);
+    
+}
+
+console.log(moveZeroes([0, 1, 0, 3, 12]));
+
