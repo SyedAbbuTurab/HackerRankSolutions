@@ -2,14 +2,14 @@
 var removeDuplicates = (arr) => {
     const arrLength = arr.length;
     let uniqueArr = []
-    for(let i = 0; i < arrLength; i++) {
+    for (let i = 0; i < arrLength; i++) {
 
-        if(arr[i] !== arr[i - 1]) {
+        if (arr[i] !== arr[i - 1]) {
             uniqueArr.push(arr[i])
-        } 
+        }
     }
     console.log(uniqueArr);
-    
+
 }
 
 
@@ -20,15 +20,32 @@ var removeDuplicatesUnSort = (arr) => {
     const seen = new Set();
     const uniqueArr = [];
 
-    for(let i = 0; i < arr.length; i++) {
-        if(!seen.has(arr[i])) {
+    for (let i = 0; i < arr.length; i++) {
+        if (!seen.has(arr[i])) {
             seen.add(arr[i]);
             uniqueArr.push(arr[i])
         }
     }
-    console.log(uniqueArr);
-    
+    // console.log(uniqueArr);
+
 }
 
 removeDuplicatesUnSort([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
 )
+
+
+var duplicatesTwoPointer = (arr) => {
+    const arrLength = arr.length;
+    let i = 0;
+    for (let j = 1; j < arrLength; j++) {
+        if (arr[j] !== arr[i]) {
+            i++;
+            arr[i] = arr[j]
+        }
+    }
+    console.log(arr.slice(0, i + 1));
+
+}
+
+let arr = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
+duplicatesTwoPointer(arr);
