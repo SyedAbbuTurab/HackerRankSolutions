@@ -54,20 +54,20 @@ duplicatesTwoPointer(arr);
 const moveZeroes = (arr) => {
     let i = 0;
 
-    for(let j = 0; j < arr.length; j++) {
-        if(arr[j] !== 0) {
+    for (let j = 0; j < arr.length; j++) {
+        if (arr[j] !== 0) {
             arr[i] = arr[j]
             i++;
         }
     }
-    while(i < arr.length) {
+    while (i < arr.length) {
         arr[i] = 0;
         i++;
     }
 
     console.log(arr);
-    
+
 }
 
-console.log(moveZeroes([0, 1, 0, 3, 12]));
+console.log(moveZeroes([0, 1, 4, 0, 3, 12]));
 
