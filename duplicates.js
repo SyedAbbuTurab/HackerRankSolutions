@@ -12,5 +12,13 @@ var removeDuplicates = (arr) => {
     
 }
 
-removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+
+var removeDuplicatesUnSort = (arr) => {
+
+    const setArr = [...new Set(arr)];
+    console.log(setArr);
+    
+}
+
+removeDuplicatesUnSort([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
 )
