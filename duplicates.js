@@ -12,6 +12,19 @@ var removeDuplicates = (arr) => {
 
 }
 
+var removeDuplicates2 = function(nums) {
+    let arrLength = nums.length;
+    let uniqueArr = [];
+
+    for( let i = 0; i < arrLength; i++) {
+        if(nums[i] !== nums[i - 1]) {
+            uniqueArr.push(nums[i])
+        }
+    }
+    console.log("HERE",
+     uniqueArr)
+};
+removeDuplicates2([1,1,2])
 
 var removeDuplicatesUnSort = (arr) => {
 
