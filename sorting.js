@@ -7,16 +7,15 @@ var bubbleSort = function (arr, bool) {
     // Two ways to do it see if block
     if (bool) {
         for (let i = 0; i < arrLength - 1; i++) {
-            for(let j = 0; j < arrLength; j++) {
-                if(arr[j] > arr[j + 1]) {
+            for (let j = 0; j < arrLength; j++) {
+                if (arr[j] > arr[j + 1]) {
                     temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
                 }
             }
         }
-        console.log(arr);
-        
+
     } else {
         for (let i = 0; i < arrLength; i++) {
             let swapped = false;
@@ -91,7 +90,19 @@ var insertionSort = (arr) => {
 
         arr[j + 1] = current
     }
-    console.log(arr);
+    // console.log(arr);
 }
 
 insertionSort([5, 3, 8, 1, 2])
+
+var mergeSort = (arr) => {
+
+    if (arr.length <= 1) return arr;
+
+    const mid = Math.floor(arr.length / 2)
+    console.log(mid);
+    
+
+}
+
+mergeSort([5, 3, 8, 1, 2])
