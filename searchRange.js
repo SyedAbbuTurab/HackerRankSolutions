@@ -16,4 +16,28 @@ var searchRange = function (nums, target) {
     return (res.length) === 0 ? [-1, -1] : [res[0], res[res.length - 1]]
 };
 
-console.log(searchRange([5, 7, 7, 8, 8, 10], 8));
+// console.log(searchRange([5, 7, 7, 8, 8, 10], 8));
+
+
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var searchInsert = function(nums, target) {
+    let left = 0;
+    let right = nums.length - 1;
+
+    while(left <= right) {
+        let mid = Math.floor((left+right) / 2);
+        if(nums[mid] === target) {
+            return mid
+        } else if(nums[mid] < mid) {
+            left = mid + 1;
+        } else {
+            right = mid -1
+        }
+    }
+    return left;
+};
+console.log(searchInsert([1,3,5,6], 5));
