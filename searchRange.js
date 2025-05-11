@@ -41,3 +41,13 @@ var searchInsert = function(nums, target) {
     return left;
 };
 console.log(searchInsert([1,3,5,6], 5));
+
+
+/**
+ * @param {number} x
+ * @param {number} n
+ * @return {number}
+ */
+var myPow = function(x, n) {
+    return x**n;
+};
