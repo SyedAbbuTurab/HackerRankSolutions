@@ -7,8 +7,10 @@ var merge = function(intervals) {
 
     // Step 1: Sort intervals based on the start time
     intervals.sort((a, b) => a[0] - b[0]);
-
+    
     const merged = [intervals[0]];
+    console.log("HERE", merged);
+
 
     for (let i = 1; i < intervals.length; i++) {
         const lastMerged = merged[merged.length - 1];
@@ -24,6 +26,13 @@ var merge = function(intervals) {
 
     return merged;
 };
+
+console.log(merge([[1,3],[2,6],[8,10],[15,18]]));
+// Output: [[1,6],[8,10],[15,18]]
+
+console.log(merge([[1,4],[4,5]]));
+// Output: [[1,5]]
+
 /**
  * @param {number[][]} intervals
  * @param {number[]} newInterval
