@@ -83,3 +83,21 @@ console.log(mySqrt(8));  // Output: 2
 console.log(mySqrt(16)); // Output: 4
 console.log(mySqrt(0));  // Output: 0
 
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var climbStairs = function(n) {
+    if( n <= 2) return n;
+
+    let first = 1;
+    let second = 2;
+
+    for(let i = 3; i <= n; i++) {
+        let third = first + second
+        first = second;
+        second = third;
+    }
+    return second;
+};
