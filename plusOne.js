@@ -53,3 +53,33 @@ var addBinary = function (a, b) {
 
 console.log(addBinary("11", "1"));     // Output: "100"
 console.log(addBinary("1010", "1011")) // Output: "10101"
+
+
+var mySqrt = function(x) {
+    if (x < 2) return x; // Handle 0 and 1 quickly
+
+    let left = 1;
+    let right = x;
+    let result = 0;
+
+    while (left <= right) {
+        let mid = Math.floor((left + right) / 2);
+        let square = mid * mid;
+
+        if (square === x) {
+            return mid; // Perfect square
+        } else if (square < x) {
+            result = mid;    // Save the candidate
+            left = mid + 1;  // Try higher
+        } else {
+            right = mid - 1; // Try lower
+        }
+    }
+
+    return result; // Floor of square root
+};
+console.log(mySqrt(4));  // Output: 2
+console.log(mySqrt(8));  // Output: 2
+console.log(mySqrt(16)); // Output: 4
+console.log(mySqrt(0));  // Output: 0
+
