@@ -101,3 +101,6 @@ var climbStairs = function(n) {
     }
     return second;
 };
+console.log(climbStairs(3)); // 3
+console.log(climbStairs(4)); // 5
+
