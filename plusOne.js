@@ -16,11 +16,8 @@ var plusOne = function (digits) {
     console.log(digits);
 
 };
-console.log(
-    plusOne([1, 2, 3])
-);
-console.log(
-    plusOne([4, 3, 2, 1])
+console.log(plusOne([1, 2, 3]));
+console.log(plusOne([4, 3, 2, 1])
 ); console.log(
     plusOne([4, 3, 2, 9])
 );
@@ -55,7 +52,7 @@ console.log(addBinary("11", "1"));     // Output: "100"
 console.log(addBinary("1010", "1011")) // Output: "10101"
 
 
-var deleteDuplicates = function(head) {
+var deleteDuplicates = function (head) {
     let current = head;
 
     while (current && current.next) {
@@ -70,7 +67,7 @@ var deleteDuplicates = function(head) {
 
     return head;
 };
-var mySqrt = function(x) {
+var mySqrt = function (x) {
     if (x < 2) return x; // Handle 0 and 1 quickly
 
     let left = 1;
@@ -100,13 +97,13 @@ console.log(mySqrt(4));  // Output: 2
  * @param {number} n
  * @return {number}
  */
-var climbStairs = function(n) {
-    if( n <= 2) return n;
+var climbStairs = function (n) {
+    if (n <= 2) return n;
 
     let first = 1;
     let second = 2;
 
-    for(let i = 3; i <= n; i++) {
+    for (let i = 3; i <= n; i++) {
         let third = first + second
         first = second;
         second = third;
