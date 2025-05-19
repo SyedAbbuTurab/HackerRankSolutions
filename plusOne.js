@@ -55,6 +55,21 @@ console.log(addBinary("11", "1"));     // Output: "100"
 console.log(addBinary("1010", "1011")) // Output: "10101"
 
 
+var deleteDuplicates = function(head) {
+    let current = head;
+
+    while (current && current.next) {
+        if (current.val === current.next.val) {
+            // Skip the duplicate
+            current.next = current.next.next;
+        } else {
+            // Move to next node
+            current = current.next;
+        }
+    }
+
+    return head;
+};
 var mySqrt = function(x) {
     if (x < 2) return x; // Handle 0 and 1 quickly
 
@@ -105,20 +120,6 @@ console.log(climbStairs(3)); // 3
 console.log(climbStairs(4)); // 5
 
 
-var deleteDuplicates = function(head) {
-    let current = head;
 
-    while (current && current.next) {
-        if (current.val === current.next.val) {
-            // Skip the duplicate
-            current.next = current.next.next;
-        } else {
-            // Move to next node
-            current = current.next;
-        }
-    }
-
-    return head;
-};
 
 
