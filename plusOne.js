@@ -13,7 +13,6 @@ var plusOne = function (digits) {
         digits[i] = 0;
     }
     digits.unshift(1);
-    console.log(digits);
 
 };
 console.log(plusOne([1, 2, 3]));
