@@ -16,3 +16,21 @@ var mergeTwoLists = function (list1, list2) {
 
 console.log(mergeTwoLists([1, 4, 5], [2, 3, 6]));
 
+var lengthOfLastWord = function(s) {
+    let length = 0;
+    let i = s.length - 1;
+
+    // Skip trailing spaces
+    while (i >= 0 && s[i] === ' ') {
+        i--;
+    }
+
+    // Count characters of the last word
+    while (i >= 0 && s[i] !== ' ') {
+        length++;
+        i--;
+    }
+
+    return length;
+};
+
