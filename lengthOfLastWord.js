@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-var lengthOfLastWord = function(s) {
+var lengthOfLastWord = function (s) {
     let length = 0;
     let i = s.length - 1;
 
@@ -27,10 +27,7 @@ var lengthOfLastWord = function (s) {
     return result[result.length - 1].length
 
 };
-console.log(
-    lengthOfLastWord("Hello World")
-
-);
+console.log(lengthOfLastWord("Hello World"));
 console.log(
     lengthOfLastWord("   fly me   to   the moon  ")
 
