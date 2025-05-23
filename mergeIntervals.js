@@ -9,8 +9,6 @@ var merge = function(intervals) {
     intervals.sort((a, b) => a[0] - b[0]);
     
     const merged = [intervals[0]];
-    console.log("HERE", merged);
-
 
     for (let i = 1; i < intervals.length; i++) {
         const lastMerged = merged[merged.length - 1];
