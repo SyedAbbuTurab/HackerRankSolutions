@@ -10,9 +10,8 @@ const removeDuplicatesArr = async (arr) => {
             result.push(arr[i])
         }
     }
-    console.log(result);
+    return result
 
 }
 
-removeDuplicatesArr([4, 5, 9, 4, 9, 1, 5]
-)
+removeDuplicatesArr([4, 5, 9, 4, 9, 1, 5]).then(console.log)
