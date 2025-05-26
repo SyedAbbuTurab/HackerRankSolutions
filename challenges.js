@@ -18,7 +18,7 @@ const removeDuplicatesArr = async (arr) => {
 
 }
 
-removeDuplicatesArr([4, 5, 9, 4, 9, 1, 5]).then(console.log)
+// removeDuplicatesArr([4, 5, 9, 4, 9, 1, 5]).then(console.log)
 
 
 const firstNonRepeating = (arr) => {
@@ -39,8 +39,8 @@ const firstNonRepeating = (arr) => {
     return null;
 };
 
-console.log(firstNonRepeating([4, 5, 1, 2, 0, 4, 5, 2])); // Output: 1
-console.log(firstNonRepeating([7, 7, 8, 8]));             // Output: null
+// console.log(firstNonRepeating([4, 5, 1, 2, 0, 4, 5, 2])); // Output: 1
+// console.log(firstNonRepeating([7, 7, 8, 8]));             // Output: null
 
 
 
