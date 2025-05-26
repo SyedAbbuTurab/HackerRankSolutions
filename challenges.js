@@ -59,3 +59,18 @@ const moveZeroes = (arr) => {
     return arr;
 };
 // console.log(moveZeroes([0, 1, 0, 3, 12])); // Output: [1, 3, 12, 0, 0]
+
+const missingNumber = arr => {
+    let n = arr.length;
+    let sum = 0;
+
+    let expectedSum = n * (n + 1) / 2;
+
+    for (let i = 0; i < n; i++) {
+        sum += arr[i];
+    }
+
+    return expectedSum - sum;
+};
+
+console.log(missingNumber([3, 0, 1])); // Output: 2
