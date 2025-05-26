@@ -42,3 +42,20 @@ const firstNonRepeating = (arr) => {
 console.log(firstNonRepeating([4, 5, 1, 2, 0, 4, 5, 2])); // Output: 1
 console.log(firstNonRepeating([7, 7, 8, 8]));             // Output: null
 
+
+
+const moveZeroes = (arr) => {
+
+    let lastNonZerIndex = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== 0) {
+            if (i !== lastNonZerIndex) {
+                [arr[i], arr[lastNonZerIndex]] = [arr[lastNonZerIndex], arr[i]]
+            }
+            lastNonZerIndex++;
+        }
+    }
+    return arr;
+};
+console.log(moveZeroes([0, 1, 0, 3, 12])); // Output: [1, 3, 12, 0, 0]
