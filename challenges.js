@@ -94,3 +94,6 @@ const longestConsecutive = (arr) => {
     }
     return maxLength;
 }
+
+console.log(longestConsecutive([100, 4, 5, 200, 1, 3, 2])); // Output: 5
+
