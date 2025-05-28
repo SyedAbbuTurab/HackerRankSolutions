@@ -161,3 +161,26 @@ console.log(isSortedAndRotated([3, 4, 5, 1, 2])); // true
 console.log(isSortedAndRotated([2, 1, 3, 4]));     // false
 console.log(isSortedAndRotated([1, 2, 3]));        // true
 
+const maxDifference = (arr) => {
+    if (arr.length < 2) return 0;
+
+    let minSoFar = arr[0];
+    let maxDiff = 0;
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > minSoFar) {
+            maxDiff = Math.max(maxDiff, arr[i] - minSoFar);
+        } else {
+            minSoFar = arr[i];
+        }
+    }
+
+    return maxDiff;
+};
+
+// Test cases
+console.log(maxDifference([2, 3, 10, 6, 4, 8, 1])); // Output: 8
+console.log(maxDifference([7, 9, 5, 6, 3, 2]));     // Output: 2
+console.log(maxDifference([10, 9, 8, 7]));          // Output: 0
+
+
