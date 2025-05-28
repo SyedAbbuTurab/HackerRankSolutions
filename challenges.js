@@ -121,3 +121,23 @@ const productExceptSelf = (nums) => {
 console.log(productExceptSelf([1, 2, 3, 4])); // Output: [24, 12, 8, 6]
 
 
+const findDuplicates = (nums) => {
+    const result = [];
+
+    for (let i = 0; i < nums.length; i++) {
+        const index = Math.abs(nums[i]) - 1;
+
+        if (nums[index] < 0) {
+            // If already negative, we've seen this number before
+            result.push(Math.abs(nums[i]));
+        } else {
+            // Mark as visited by flipping the sign
+            nums[index] = -nums[index];
+        }
+    }
+
+    return result;
+};
+
+console.log(findDuplicates([4, 3, 2, 7, 8, 2, 3, 1])); // Output: [2, 3]
+
