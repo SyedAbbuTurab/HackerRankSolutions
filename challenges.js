@@ -157,9 +157,9 @@ const isSortedAndRotated = (arr) => {
 };
 
 // Test cases
-console.log(isSortedAndRotated([3, 4, 5, 1, 2])); // true
-console.log(isSortedAndRotated([2, 1, 3, 4]));     // false
-console.log(isSortedAndRotated([1, 2, 3]));        // true
+// console.log(isSortedAndRotated([3, 4, 5, 1, 2])); // true
+// console.log(isSortedAndRotated([2, 1, 3, 4]));     // false
+// console.log(isSortedAndRotated([1, 2, 3]));        // true
 
 const maxDifference = (arr) => {
     if (arr.length < 2) return 0;
@@ -178,9 +178,9 @@ const maxDifference = (arr) => {
     return maxDiff;
 };
 
-// Test cases
-console.log(maxDifference([2, 3, 10, 6, 4, 8, 1])); // Output: 8
-console.log(maxDifference([7, 9, 5, 6, 3, 2]));     // Output: 2
-console.log(maxDifference([10, 9, 8, 7]));          // Output: 0
+// // Test cases
+// console.log(maxDifference([2, 3, 10, 6, 4, 8, 1])); // Output: 8
+// console.log(maxDifference([7, 9, 5, 6, 3, 2]));     // Output: 2
+// console.log(maxDifference([10, 9, 8, 7]));          // Output: 0
 
 
