@@ -141,3 +141,23 @@ const findDuplicates = (nums) => {
 
 // console.log(findDuplicates([4, 3, 2, 7, 8, 2, 3, 1])); // Output: [2, 3]
 
+const isSortedAndRotated = (arr) => {
+    let count = 0;
+    const n = arr.length;
+
+    for (let i = 0; i < n; i++) {
+        const next = (i + 1) % n;
+        if (arr[i] > arr[next]) {
+            count++;
+        }
+    }
+
+    // Valid if there is at most one "drop" in order
+    return count <= 1;
+};
+
+// Test cases
+console.log(isSortedAndRotated([3, 4, 5, 1, 2])); // true
+console.log(isSortedAndRotated([2, 1, 3, 4]));     // false
+console.log(isSortedAndRotated([1, 2, 3]));        // true
+
