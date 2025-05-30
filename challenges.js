@@ -73,7 +73,7 @@ const missingNumber = arr => {
     return expectedSum - sum;
 };
 
-// console.log(missingNumber([3, 0, 1])); // Output: 2
+console.log(missingNumber([3, 0, 1])); // Output: 2
 
 
 const longestConsecutive = (arr) => {
