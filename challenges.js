@@ -139,7 +139,7 @@ const findDuplicates = (nums) => {
     return result;
 };
 
-// console.log(findDuplicates([4, 3, 2, 7, 8, 2, 3, 1])); // Output: [2, 3]
+console.log(findDuplicates([4, 3, 2, 7, 8, 2, 3, 1])); // Output: [2, 3]
 
 const isSortedAndRotated = (arr) => {
     let count = 0;
