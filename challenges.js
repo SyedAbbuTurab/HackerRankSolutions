@@ -95,7 +95,7 @@ const longestConsecutive = (arr) => {
     return maxLength;
 }
 
-// console.log(longestConsecutive([100, 4, 5, 200, 1, 3, 2])); // Output: 5
+console.log(longestConsecutive([100, 4, 5, 200, 1, 3, 2])); // Output: 5
 
 const productExceptSelf = (nums) => {
     const n = nums.length;
