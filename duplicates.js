@@ -74,7 +74,7 @@ const moveZeroes = (arr) => {
         i++;
     }
 
-    console.log(arr);
+    // console.log(arr);
 
 }
 
