@@ -18,6 +18,8 @@ var longestCommonPrefix = function (strs) {
 };
 
 
+
+
 let res = longestCommonPrefix(["abb","abc"])
 console.log(res);
 console.log(longestCommonPrefix(["flower", "flow", "flight"])); // Output: "fl"
