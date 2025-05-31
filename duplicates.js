@@ -28,8 +28,6 @@ removeDuplicates2([1,1,2])
 
 var removeDuplicatesUnSort = (arr) => {
 
-    // const setArr = [...new Set(arr)];
-    // console.log(setArr);
     const seen = new Set();
     const uniqueArr = [];
 
@@ -39,7 +37,6 @@ var removeDuplicatesUnSort = (arr) => {
             uniqueArr.push(arr[i])
         }
     }
-    // console.log(uniqueArr);
 
 }
 
