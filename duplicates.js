@@ -53,7 +53,6 @@ var duplicatesTwoPointer = (arr) => {
             arr[i] = arr[j]
         }
     }
-    // console.log(arr.slice(0, i + 1));
 
 }
 
