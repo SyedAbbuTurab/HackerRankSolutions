@@ -187,8 +187,8 @@ const maxDifference = (arr) => {
 function evenNum(arr) {
     let count = 0;
 
-     arr.forEach((elem) => {
-        if(elem % 2 == 0) {
+    arr.forEach((elem) => {
+        if (elem % 2 == 0) {
             count++;
         }
     })
@@ -208,7 +208,7 @@ const areArraysEqual = (arr1, arr2) => {
         countMap[num] = (countMap[num] || 0) + 1;
     }
     console.log(countMap);
-    
+
 
     // Subtract counts using arr2
     for (let num of arr2) {
@@ -223,4 +223,21 @@ const areArraysEqual = (arr1, arr2) => {
 // console.log(areArraysEqual([1, 2, 3], [3, 2, 1]));   // true
 // console.log(areArraysEqual([1, 2, 2], [2, 1, 1]));   // false
 // console.log(areArraysEqual([4, 5], [5, 4]));         // true
+
+function mergeAndSort(arr1, arr2) {
+    let mergedArr = [...arr1, ...arr2];
+    let temp;
+    for (let i = 1; i < mergedArr.length - 1; i++) {
+        if (mergedArr[i] >= mergedArr[i + 1]) {
+            temp = mergedArr[i];
+            mergedArr[i] = mergedArr[i + 1];
+            mergedArr[i + 1] = temp
+        }
+    }
+    return mergedArr;
+}
+
+console.log(mergeAndSort([1, 3, 5], [2, 4, 6]));
+
+
 
