@@ -195,4 +195,32 @@ function evenNum(arr) {
 
     return count;
 }
-console.log(evenNum([1, 2, 3, 4, 5, 6]));
+// console.log(evenNum([1, 2, 3, 4, 5, 6]));
+
+
+const areArraysEqual = (arr1, arr2) => {
+    if (arr1.length !== arr2.length) return false;
+
+    const countMap = {};
+
+    // Count elements in arr1
+    for (let num of arr1) {
+        countMap[num] = (countMap[num] || 0) + 1;
+    }
+    console.log(countMap);
+    
+
+    // Subtract counts using arr2
+    for (let num of arr2) {
+        if (!countMap[num]) return false;
+        countMap[num]--;
+    }
+
+    // return true;
+};
+
+// Test cases
+console.log(areArraysEqual([1, 2, 3], [3, 2, 1]));   // true
+// console.log(areArraysEqual([1, 2, 2], [2, 1, 1]));   // false
+// console.log(areArraysEqual([4, 5], [5, 4]));         // true
+
