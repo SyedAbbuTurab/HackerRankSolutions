@@ -227,7 +227,7 @@ const areArraysEqual = (arr1, arr2) => {
 function mergeAndSort(arr1, arr2) {
     let mergedArr = [...arr1, ...arr2];
     let temp;
-    for (let i = 1; i < mergedArr.length - 1; i++) {
+    for (let i = 0; i < mergedArr.length - 1; i++) {
         if (mergedArr[i] >= mergedArr[i + 1]) {
             temp = mergedArr[i];
             mergedArr[i] = mergedArr[i + 1];
