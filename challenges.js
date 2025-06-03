@@ -237,7 +237,7 @@ function mergeAndSort(arr1, arr2) {
     return mergedArr;
 }
 
-console.log(mergeAndSort([1, 3, 5], [2, 4, 6]));
+// console.log(mergeAndSort([1, 3, 5], [2, 4, 6]));
 
 function mergeAndSort1(arr1, arr2) {
     let mergedArr = [];
@@ -258,8 +258,25 @@ function mergeAndSort1(arr1, arr2) {
     return mergedArr;
 }
 
-console.log(mergeAndSort1([1, 3, 5], [2, 4, 6])); // Output: [1, 2, 3, 4, 5, 6]
+// console.log(mergeAndSort1([1, 3, 5], [2, 4, 6])); // Output: [1, 2, 3, 4, 5, 6]
 
 
+    function secondLargest(arr) {
+        let n = arr.length;
+        let temp
+        for (let i = 0; i < n - 1; i++) {
+            for (let j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        
+        
+        console.log(arr[n - 2]);
 
+    }
+    secondLargest([1, 4, 3, 5, 2])
 
