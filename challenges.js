@@ -239,5 +239,27 @@ function mergeAndSort(arr1, arr2) {
 
 console.log(mergeAndSort([1, 3, 5], [2, 4, 6]));
 
+function mergeAndSort1(arr1, arr2) {
+    let mergedArr = [];
+    let i = 0;
+    let j = 0;
+    let totalLength = arr1.length + arr2.length;
+
+    for (let k = 0; k < totalLength; k++) {
+        if (i < arr1.length && (j >= arr2.length || arr1[i] < arr2[j])) {
+            mergedArr.push(arr1[i]);
+            i++;
+        } else {
+            mergedArr.push(arr2[j]);
+            j++;
+        }
+    }
+
+    return mergedArr;
+}
+
+console.log(mergeAndSort1([1, 3, 5], [2, 4, 6])); // Output: [1, 2, 3, 4, 5, 6]
+
+
 
 
