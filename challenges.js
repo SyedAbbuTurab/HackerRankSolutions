@@ -216,11 +216,11 @@ const areArraysEqual = (arr1, arr2) => {
         countMap[num]--;
     }
 
-    // return true;
+    return true;
 };
 
 // Test cases
-console.log(areArraysEqual([1, 2, 3], [3, 2, 1]));   // true
+// console.log(areArraysEqual([1, 2, 3], [3, 2, 1]));   // true
 // console.log(areArraysEqual([1, 2, 2], [2, 1, 1]));   // false
 // console.log(areArraysEqual([4, 5], [5, 4]));         // true
 
