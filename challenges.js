@@ -185,15 +185,14 @@ const maxDifference = (arr) => {
 
 
 function evenNum(arr) {
-    let lengthArr = arr.length;
-    let arrRes = []
+    let count = 0;
 
      arr.forEach((elem) => {
         if(elem % 2 == 0) {
-            arrRes.push(elem);
+            count++;
         }
     })
 
-    return arrRes;
+    return count;
 }
 console.log(evenNum([1, 2, 3, 4, 5, 6]));
