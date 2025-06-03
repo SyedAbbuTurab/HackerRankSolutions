@@ -178,9 +178,9 @@ const maxDifference = (arr) => {
     return maxDiff;
 };
 
-// // Test cases
-console.log(maxDifference([2, 3, 10, 6, 4, 8, 1])); // Output: 8
-console.log(maxDifference([7, 9, 5, 6, 3, 2]));     // Output: 2
-console.log(maxDifference([10, 9, 8, 7]));          // Output: 0
+// // // Test cases
+// console.log(maxDifference([2, 3, 10, 6, 4, 8, 1])); // Output: 8
+// console.log(maxDifference([7, 9, 5, 6, 3, 2]));     // Output: 2
+// console.log(maxDifference([10, 9, 8, 7]));          // Output: 0
 
 
