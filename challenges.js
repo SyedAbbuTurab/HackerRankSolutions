@@ -309,4 +309,20 @@ var getPositives = arr => {
     return count;
 }
 
-console.log(getPositives([-2, 0, 3, 5, -1, 6]));
+// console.log(getPositives([-2, 0, 3, 5, -1, 6]));
+
+var sumOfEvens = arr => {
+    let n = arr.length;
+    
+    let sum = 0;
+
+    arr.forEach((elem) => {
+        if(elem % 2 == 0) {
+            sum += elem
+        }
+    })
+    return sum;
+}
+
+console.log(sumOfEvens([1, 2, 3, 4, 5, 6]));
+
