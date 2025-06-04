@@ -283,5 +283,16 @@ function secondLargest(arr) {
 
     console.log(null); // If all elements are the same
 }
-secondLargest([1, 4, 3, 5, 2, 5])
+// secondLargest([1, 4, 3, 5, 2, 5])
 
+function getUniqueElem(arr) {
+    let result = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        result ^= arr[i]
+    }
+
+    return result;
+}
+
+console.log(getUniqueElem([2, 3, 5, 4, 5, 3, 4])); // Output: 2
