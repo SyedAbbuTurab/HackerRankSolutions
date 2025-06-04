@@ -295,4 +295,18 @@ function getUniqueElem(arr) {
     return result;
 }
 
-console.log(getUniqueElem([2, 3, 5, 4, 5, 3, 4])); // Output: 2
+// console.log(getUniqueElem([2, 3, 5, 4, 5, 3, 4])); // Output: 2
+
+var getPositives = arr => {
+    let n = arr.length;
+    let count = 0;
+
+    for (let i = 0; i < n; i++) {
+        if(arr[i] > 0) {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(getPositives([-2, 0, 3, 5, -1, 6]));
