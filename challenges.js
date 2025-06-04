@@ -324,5 +324,17 @@ var sumOfEvens = arr => {
     return sum;
 }
 
-console.log(sumOfEvens([1, 2, 3, 4, 5, 6]));
+// console.log(sumOfEvens([1, 2, 3, 4, 5, 6]));
+
+function reverseArr(arr) {
+    let n = arr.length;
+    let reversed = []
+    for(let i = n - 1; i>= 0; i--){
+        reversed.push(arr[i])
+    }
+    return reversed;
+}
+
+console.log(reverseArr([5, 4, 3, 2, 1]));
+
 
