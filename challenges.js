@@ -302,7 +302,7 @@ var getPositives = arr => {
     let count = 0;
 
     for (let i = 0; i < n; i++) {
-        if(arr[i] > 0) {
+        if (arr[i] > 0) {
             count++;
         }
     }
@@ -313,11 +313,11 @@ var getPositives = arr => {
 
 var sumOfEvens = arr => {
     let n = arr.length;
-    
+
     let sum = 0;
 
     arr.forEach((elem) => {
-        if(elem % 2 == 0) {
+        if (elem % 2 == 0) {
             sum += elem
         }
     })
@@ -329,12 +329,27 @@ var sumOfEvens = arr => {
 function reverseArr(arr) {
     let n = arr.length;
     let reversed = []
-    for(let i = n - 1; i>= 0; i--){
+    for (let i = n - 1; i >= 0; i--) {
         reversed.push(arr[i])
     }
     return reversed;
 }
 
-console.log(reverseArr([5, 4, 3, 2, 1]));
+// console.log(reverseArr([5, 4, 3, 2, 1]));
+
+function findPairsWithSum(arr, target) {
+    const seen = new Set();
+    const result = [];
+
+    for( let num of arr) {
+        const compliment = target - num;
+        if(seen.has(compliment)) {
+            result.push([compliment, num])
+        }
+        seen.add(num)
+    }
+    return result
+}
+console.log(findPairsWithSum([1, 2, 3, 4, 5], 6)); // Output: [ [2, 4], [1, 5] ]
 
 
