@@ -368,5 +368,5 @@ function majorityElement(arr) {
 }
 
 // Test case
-console.log(majorityElement([2, 2, 1, 2, 3, 2, 2])); // Output: 2
+// console.log(majorityElement([2, 2, 1, 2, 3, 2, 2])); // Output: 2
 
