@@ -352,4 +352,21 @@ function findPairsWithSum(arr, target) {
 }
 // console.log(findPairsWithSum([1, 2, 3, 4, 5], 6)); // Output: [ [2, 4], [1, 5] ]
 
+function majorityElement(arr) {
+    let count = 0;
+    let candidate = null;
+
+    for (let num of arr) {
+        if (count === 0) {
+            candidate = num;
+        }
+
+        count += (num === candidate) ? 1 : -1;
+    }
+
+    return candidate;
+}
+
+// Test case
+console.log(majorityElement([2, 2, 1, 2, 3, 2, 2])); // Output: 2
 
