@@ -370,3 +370,13 @@ function majorityElement(arr) {
 // Test case
 // console.log(majorityElement([2, 2, 1, 2, 3, 2, 2])); // Output: 2
 
+function findMissingNumber(arr) {
+    const n = arr.length + 1;
+    const expectedSum = (n * (n + 1)) / 2;
+    const actualSum = arr.reduce((acc, num) => acc + num, 0);
+    return expectedSum - actualSum;
+}
+
+// Test case
+console.log(findMissingNumber([1, 2, 4, 5])); // Output: 3
+
