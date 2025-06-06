@@ -378,5 +378,5 @@ function findMissingNumber(arr) {
 }
 
 // Test case
-console.log(findMissingNumber([1, 2, 4, 5])); // Output: 3
+// console.log(findMissingNumber([1, 2, 4, 5])); // Output: 3
 
