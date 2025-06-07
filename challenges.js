@@ -416,4 +416,4 @@ function containsNearbyDuplicate(nums, k) {
 }
 
 // Test case
-console.log(containsNearbyDuplicate([1, 2, 3, 1], 3)); // Output: true
+// console.log(containsNearbyDuplicate([1, 2, 3, 1], 3)); // Output: true
