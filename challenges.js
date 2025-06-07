@@ -396,5 +396,5 @@ function findPeakElement(nums) {
 }
 
 // Test case
-console.log(findPeakElement([1, 3, 20, 4, 1, 0])); // Output: 2
+// console.log(findPeakElement([1, 3, 20, 4, 1, 0])); // Output: 2
 
