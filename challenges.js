@@ -380,3 +380,21 @@ function findMissingNumber(arr) {
 // Test case
 // console.log(findMissingNumber([1, 2, 4, 5])); // Output: 3
 
+
+function findPeakElement(nums) {
+    for (let i = 1; i < nums.length - 1; i++) {
+        if (nums[i] > nums[i - 1] && nums[i] > nums[i + 1]) {
+            return i;
+        }
+    }
+
+    // Handle edge cases (first or last element is peak)
+    if (nums.length === 1 || nums[0] > nums[1]) return 0;
+    if (nums[nums.length - 1] > nums[nums.length - 2]) return nums.length - 1;
+
+    return -1; // fallback
+}
+
+// Test case
+console.log(findPeakElement([1, 3, 20, 4, 1, 0])); // Output: 2
+
