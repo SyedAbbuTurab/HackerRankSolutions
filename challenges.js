@@ -398,3 +398,22 @@ function findPeakElement(nums) {
 // Test case
 // console.log(findPeakElement([1, 3, 20, 4, 1, 0])); // Output: 2
 
+function containsNearbyDuplicate(nums, k) {
+    const seen = new Set();
+
+    for (let i = 0; i < nums.length; i++) {
+        if (seen.has(nums[i])) return true;
+
+        seen.add(nums[i]);
+
+        // Keep the set window size at most k
+        if (seen.size > k) {
+            seen.delete(nums[i - k]);
+        }
+    }
+
+    return false;
+}
+
+// Test case
+console.log(containsNearbyDuplicate([1, 2, 3, 1], 3)); // Output: true
