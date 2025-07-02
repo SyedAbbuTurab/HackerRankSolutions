@@ -31,7 +31,7 @@ var removeFalsyValues = (arr) => {
   let result = [];
 
   for (let i = 0; i < arr.length; i++) {
-    if (typeof arr[i] === 'number') {
+    if (typeof arr[i] === 'number' && Boolean(arr[i])) {
       result.push(arr[i])
     }
   }
