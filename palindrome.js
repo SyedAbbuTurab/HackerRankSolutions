@@ -7,7 +7,7 @@ var isPalindrome = function (int) {
   }
   while (int !== 0) {
     num = int % 10
-    reversed = reversed * 10 + num;s
+    reversed = reversed * 10 + num; s
     int = Math.trunc(int / 10)
   }
   return reversed == original;
@@ -16,5 +16,13 @@ var isPalindrome = function (int) {
 // console.log(isPalindrome(-10));
 
 
+var reverseStr = (str) => {
+  let reverse = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    reverse += str[i]
+  }
+  return reverse;
+}
 
+console.log(reverseStr("Hello"));
 
