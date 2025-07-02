@@ -39,3 +39,19 @@ var removeFalsyValues = (arr) => {
 }
 
 // console.log(removeFalsyValues([0, 1, false, 2, "", 3, null, undefined, NaN, 4, true]));
+
+function flattenOnce (arr) {
+  let result = [];
+  for(let i = 0; i < arr.length; i++) {
+    if(Array.isArray(arr[i])) {
+      for(let j = 0; j < arr[i].length; j++) {
+        result.push(arr[i][j]);
+      }
+    } else {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+
+console.log(flattenOnce([1, [2, 3], 4, [5, 6], 7]));
