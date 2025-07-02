@@ -24,6 +24,18 @@ var reverseStr = (str) => {
   return reverse;
 }
 
-console.log(reverseStr("Hello"));
-console.log(reverseStr("Hello World")); // Test case for space
+// console.log(reverseStr("Hello"));
+// console.log(reverseStr("Hello World")); // Test case for space
 
+var removeFalsyValues = (arr) => {
+  let result = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]) {
+      result.push(arr[i])
+    }
+  }
+  return result;
+}
+
+console.log(removeFalsyValues([0, 1, false, 2, "", 3, null, undefined, NaN, 4, true]));
