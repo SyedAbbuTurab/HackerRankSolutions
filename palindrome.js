@@ -25,4 +25,5 @@ var reverseStr = (str) => {
 }
 
 console.log(reverseStr("Hello"));
+console.log(reverseStr("Hello World")); // Test case for space
 
