@@ -38,4 +38,4 @@ var removeFalsyValues = (arr) => {
   return result;
 }
 
-console.log(removeFalsyValues([0, 1, false, 2, "", 3, null, undefined, NaN, 4, true]));
+// console.log(removeFalsyValues([0, 1, false, 2, "", 3, null, undefined, NaN, 4, true]));
