@@ -7,11 +7,14 @@ var isPalindrome = function (int) {
   }
   while (int !== 0) {
     num = int % 10
-    reversed = reversed * 10 + num;
+    reversed = reversed * 10 + num;s
     int = Math.trunc(int / 10)
   }
   return reversed == original;
 };
 
-console.log(isPalindrome(-10));
+// console.log(isPalindrome(-10));
+
+
+
 
