@@ -14,7 +14,7 @@ var mergeTwoLists = function (list1, list2) {
     return mergedList;
 };
 
-console.log(mergeTwoLists([1, 4, 5], [2, 3, 6]));
+// console.log(mergeTwoLists([1, 4, 5], [2, 3, 6]));
 
 var lengthOfLastWord = function(s) {
     let length = 0;
