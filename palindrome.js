@@ -13,7 +13,7 @@ var isPalindrome = function (int) {
   return reversed == original;
 };
 
-// console.log(isPalindrome(-10));
+console.log(isPalindrome(-10));
 
 
 var reverseStr = (str) => {
@@ -25,7 +25,7 @@ var reverseStr = (str) => {
 }
 
 // console.log(reverseStr("Hello"));
-// console.log(reverseStr("Hello World")); // Test case for space
+// console.log(reverseStr("Hello World")); 
 
 var removeFalsyValues = (arr) => {
   let result = [];
@@ -54,4 +54,4 @@ function flattenOnce (arr) {
   return result;
 }
 
-console.log(flattenOnce([1, [2, 3], 4, [5, 6], 7]));
+// console.log(flattenOnce([1, [2, 3], 4, [5, 6], 7]));
