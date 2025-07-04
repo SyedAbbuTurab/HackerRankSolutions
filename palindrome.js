@@ -13,7 +13,7 @@ var isPalindrome = function (int) {
   return reversed == original;
 };
 
-console.log(isPalindrome(-10));
+// console.log(isPalindrome(-10));
 
 
 var reverseStr = (str) => {
