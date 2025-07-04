@@ -26,5 +26,5 @@ function expandFromCenter(s, left, right) {
 }
 
 let res = longestPalindrome("babad")
-console.log(res);
+// console.log(res);
 
