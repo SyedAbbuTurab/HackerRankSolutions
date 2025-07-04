@@ -24,7 +24,6 @@ var reverseStr = (str) => {
   return reverse;
 }
 
-// console.log(reverseStr("Hello"));
 // console.log(reverseStr("Hello World")); 
 
 var removeFalsyValues = (arr) => {
