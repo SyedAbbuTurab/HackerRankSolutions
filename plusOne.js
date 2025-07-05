@@ -15,8 +15,8 @@ var plusOne = function (digits) {
     digits.unshift(1);
 
 };
-console.log(plusOne([1, 2, 3]));
-console.log(plusOne([4, 3, 2, 1]));
+// console.log(plusOne([1, 2, 3]));
+// console.log(plusOne([4, 3, 2, 1]));
 console.log(plusOne([4, 3, 2, 9]));
 
 /**
