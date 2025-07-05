@@ -46,7 +46,7 @@ var addBinary = function (a, b) {
 };
 
 console.log(addBinary("11", "1"));     // Output: "100"
-console.log(addBinary("1010", "1011")) // Output: "10101"
+// console.log(addBinary("1010", "1011")) // Output: "10101"
 
 
 var deleteDuplicates = function (head) {
