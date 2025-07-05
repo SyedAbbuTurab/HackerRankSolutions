@@ -17,4 +17,4 @@ const arr = [
     [9, 8, 9]
 ]
 
-diagonaDifference(arr)
+// diagonaDifference(arr)
