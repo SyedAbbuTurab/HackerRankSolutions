@@ -87,8 +87,8 @@ var mySqrt = function (x) {
 
     return result; // Floor of square root
 };
-console.log(mySqrt(4));  // Output: 2
-console.log(mySqrt(8));  
+// console.log(mySqrt(4));  // Output: 2
+// console.log(mySqrt(8));  
 
 
 /**
