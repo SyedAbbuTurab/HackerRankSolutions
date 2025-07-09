@@ -6,8 +6,7 @@ var testUserAuth = (name) => {
     if(user) {
         var userAuthSucc = LogInUser(user)
     }
-    userAuthSucc.then((res) => console.log(res)
-    )
+   console.log(userAuthSucc)
     // console.log();
     
 }
