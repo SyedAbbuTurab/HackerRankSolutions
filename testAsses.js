@@ -3,7 +3,6 @@ function advancedWebsocketHandler(messages) {
   const result = [];
 
   for (const msg of messages) {
-    // const { type, payload } = msg;
     const parsedMsg = typeof msg === 'string' ? JSON.parse(msg) : msg;
     const { type } = parsedMsg;
 
