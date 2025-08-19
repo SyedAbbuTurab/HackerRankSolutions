@@ -8,10 +8,6 @@ function advancedWebsocketHandler(messages) {
     const { type } = parsedMsg;
 
     const payload = typeof parsedMsg.payload === 'string' ? JSON.parse(parsedMsg.payload) : parsedMsg.payload;
-    // let payload = parsedMsg.payload;
-    // if(typeof payload === 'string') {
-    //   payload = JSON.parse(payload);
-    // }
     if (type === 'create') {
       const { itemName, quantity } = payload;
       result.push(`Created ${quantity} of ${itemName}`);
